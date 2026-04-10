@@ -260,13 +260,14 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {GALLERY_IMAGES.slice(0, 6).map((img, i) => (
-              <motion.div 
-                key={i}
-                whileHover={{ scale: 1.02 }}
-                className="aspect-square rounded-2xl overflow-hidden shadow-md"
-              >
-                <img src={img} alt={`All Star Project ${i+1}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-              </motion.div>
+              <Link to="/gallery" key={i}>
+                <motion.div 
+                  whileHover={{ scale: 1.02 }}
+                  className="aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer"
+                >
+                  <img src={img} alt={`All Star Project ${i+1}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
