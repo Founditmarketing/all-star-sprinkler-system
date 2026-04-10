@@ -10,7 +10,6 @@ import ServiceCard from '../components/ServiceCard';
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
 import Counter from '../components/Counter';
-import BeforeAfter from '../components/BeforeAfter';
 
 export default function Home() {
   return (
@@ -21,7 +20,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-midnight-navy/60 z-10" />
@@ -36,26 +35,26 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 w-full">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pb-24">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-block bg-water-blue/20 backdrop-blur-md border border-water-blue/30 text-water-blue px-4 py-2 rounded-full font-bold text-sm uppercase tracking-widest mb-6">
+              <span className="inline-block bg-water-blue/20 backdrop-blur-md border border-water-blue/30 text-water-blue px-4 py-2 rounded-full font-bold text-sm uppercase tracking-widest mb-4">
                 Established & Trusted in CENLA
               </span>
-              <h1 className="text-5xl md:text-7xl text-white font-display font-extrabold leading-tight mb-6 text-balance">
+              <h1 className="text-5xl md:text-7xl text-white font-display font-extrabold leading-tight mb-4 text-balance">
                 We Don't Just Install Sprinklers. <br />
                 <span className="text-water-blue">We Keep Louisiana Green.</span>
               </h1>
-              <p className="text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
+              <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
                 Experience the All Star difference with our trenchless installation technology. 
                 Maximum efficiency, zero lawn damage, and a lifetime of lush green grass.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link to="/contact-us" className="bg-water-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-deep-canal transition-all transform hover:scale-105 shadow-xl shadow-water-blue/30 text-center">
                   Get a Free Estimate
                 </Link>
@@ -107,16 +106,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white/50"
-        >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-white rounded-full" />
-          </div>
-        </motion.div>
       </section>
 
       {/* 1. Services Mini - "Everything Your Lawn Needs" */}
@@ -128,7 +117,7 @@ export default function Home() {
               From precision irrigation to dramatic lighting, we provide full-service outdoor solutions for Central Louisiana.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service, i) => (
               <ServiceCard key={service.id} service={service} index={i} />
             ))}
@@ -206,9 +195,11 @@ export default function Home() {
               </Link>
             </motion.div>
             <div className="relative">
-              <BeforeAfter 
-                before="https://allstarsprinklers.com/wp-content/uploads/2024/06/1-1.png"
-                after="https://allstarsprinklers.com/wp-content/uploads/2024/06/1.png"
+              <img 
+                src="https://allstarsprinklers.com/wp-content/uploads/2024/06/1.png"
+                alt="Trenchless irrigation installation result"
+                className="rounded-3xl shadow-2xl w-full"
+                referrerPolicy="no-referrer"
               />
             </div>
           </div>
@@ -422,31 +413,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. Boring Mini - "We Go Under" bold graphic */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-midnight-navy rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-              <div className="absolute top-1/2 left-0 w-full h-1 bg-water-blue" />
-              <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-water-blue rounded-full -translate-y-1/2" />
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-6xl text-white mb-8">We Go Under. <br /><span className="text-water-blue">No Concrete Cutting.</span></h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-                Need to run a line under your driveway or sidewalk? Don't break the concrete. 
-                Our horizontal boring technology saves you time and thousands in repair costs.
-              </p>
-              <Link to="/boring-under-sidewalks-driveways" className="bg-white text-midnight-navy px-10 py-5 rounded-full font-bold text-lg hover:bg-water-blue hover:text-white transition-all inline-block">
-                Learn About Boring
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Final CTA */}
       <section className="py-24 bg-water-blue text-white">
