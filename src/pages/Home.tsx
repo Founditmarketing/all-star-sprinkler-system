@@ -37,7 +37,7 @@ export default function Home() {
           </video>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pb-24">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pt-24 pb-32">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
