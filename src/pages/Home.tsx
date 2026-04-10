@@ -26,13 +26,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-midnight-navy/60 z-10" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-midnight-navy/80 z-10" />
           
-          {/* In a real app, this would be a video tag */}
-          <img 
-            src="https://picsum.photos/seed/sprinkler/1920/1080" 
-            alt="Lush green lawn" 
-            className="w-full h-full object-cover animate-ken-burns"
-            referrerPolicy="no-referrer"
-          />
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/SprinklerVid.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pb-24">
