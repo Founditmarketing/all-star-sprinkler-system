@@ -73,6 +73,20 @@ export const SERVICES: Service[] = [
       { question: "How do I know if I need a French drain?", answer: "If you have standing water that remains for more than 24 hours after a rain, or if water is pooling near your foundation, a French drain is likely needed." },
       { question: "Will drainage work ruin my landscaping?", answer: "We take great care to minimize disruption and restore your lawn to its original condition after installation." }
     ]
+  },
+  {
+    id: "boring",
+    title: "Boring Under Sidewalks & Driveways",
+    slug: "boring-under-sidewalks-driveways",
+    description: "Professional horizontal boring services to run pipes and wires without cutting your concrete.",
+    longDescription: "Don't cut your expensive driveway or sidewalk. Our horizontal boring equipment allows us to tunnel underneath concrete structures to install irrigation lines, electrical conduits, or drainage pipes without leaving a mark on the surface.",
+    icon: "ArrowRightLeft",
+    image: "https://allstarsprinklers.com/wp-content/uploads/2024/06/20.png",
+    features: ["No-cut driveway crossings", "Sidewalk & walkway boring", "Utility conduit installation", "Precise horizontal alignment"],
+    faqs: [
+      { question: "Can you bore under a double-wide driveway?", answer: "Yes, our equipment can easily handle standard and oversized driveways." },
+      { question: "Is boring more expensive than cutting concrete?", answer: "While the initial cost may be slightly higher, it saves you the much larger expense of concrete repair and replacement." }
+    ]
   }
 ];
 

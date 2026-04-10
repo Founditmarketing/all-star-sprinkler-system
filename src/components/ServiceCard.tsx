@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Droplets, Wrench, Lightbulb, Waves } from 'lucide-react';
+import { ArrowRight, Droplets, Wrench, Lightbulb, Waves, ArrowRightLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Service } from '../types';
 import { cn } from '../lib/utils';
@@ -9,7 +9,8 @@ const iconMap: Record<string, any> = {
   Droplets,
   Wrench,
   Lightbulb,
-  Waves
+  Waves,
+  ArrowRightLeft
 };
 
 export default function ServiceCard({ service, index }: { service: Service; index: number; key?: string | number }) {
