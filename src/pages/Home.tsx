@@ -20,7 +20,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative min-h-[600px] flex flex-col justify-center overflow-hidden">
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-midnight-navy/60 z-10" />
@@ -37,7 +37,7 @@ export default function Home() {
           </video>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pt-72 pb-[22rem]">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pt-32 pb-40">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
