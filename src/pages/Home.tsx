@@ -132,33 +132,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Free Quote Mini - Full-width blue inline form */}
-      <section className="bg-water-blue py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl text-white mb-6">Ready for a Greener Lawn?</h2>
-                <p className="text-white/80 text-lg mb-8">
-                  Get a free, no-obligation estimate for your project. Our experts will visit your property and provide a custom solution.
-                </p>
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-center gap-3 text-white">
-                    <CheckCircle2 className="text-turf-green" />
-                    <span>On-site consultations</span>
+      {/* 2. Free Quote - Premium Split Panel */}
+      <section className="relative py-24 bg-midnight-navy overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-water-blue/5 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-deep-canal/10 rounded-full blur-[100px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="inline-block bg-water-blue/10 border border-water-blue/20 text-water-blue px-4 py-2 rounded-full font-bold text-sm uppercase tracking-widest mb-6">
+                Free Estimates
+              </span>
+              <h2 className="text-4xl md:text-5xl text-white font-display font-extrabold mb-6 leading-tight">
+                Your Dream Lawn <br />
+                <span className="text-water-blue">Starts Here.</span>
+              </h2>
+              <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-lg">
+                Tell us about your project and our CENLA experts will provide a custom solution — completely free, no strings attached.
+              </p>
+
+              {/* Trust indicators */}
+              <div className="grid grid-cols-3 gap-6 mb-10">
+                {[
+                  { value: "Free", label: "On-Site Visit" },
+                  { value: "24hr", label: "Response Time" },
+                  { value: "15+", label: "Years Expert" }
+                ].map((stat, i) => (
+                  <div key={i} className="text-center p-4 bg-white/5 rounded-2xl border border-white/10">
+                    <p className="text-2xl font-display font-bold text-water-blue">{stat.value}</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mt-1">{stat.label}</p>
                   </div>
-                  <div className="flex items-center gap-3 text-white">
-                    <CheckCircle2 className="text-turf-green" />
-                    <span>Transparent pricing</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white">
-                    <CheckCircle2 className="text-turf-green" />
-                    <span>Expert recommendations</span>
-                  </div>
-                </div>
+                ))}
               </div>
+
+              {/* Phone CTA */}
+              <a 
+                href={`tel:${BUSINESS_INFO.phone}`} 
+                className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl hover:bg-white/10 transition-all group"
+              >
+                <div className="bg-water-blue p-3 rounded-xl shadow-lg shadow-water-blue/30 group-hover:scale-110 transition-transform">
+                  <Phone className="text-white" size={20} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Prefer to Call?</p>
+                  <p className="text-white font-bold text-lg">{BUSINESS_INFO.phone}</p>
+                </div>
+              </a>
+            </motion.div>
+
+            {/* Right - Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
               <ContactForm />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
