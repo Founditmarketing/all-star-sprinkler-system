@@ -119,9 +119,11 @@ export default function Home() {
               From precision irrigation to dramatic lighting, we provide full-service outdoor solutions for Central Louisiana.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {SERVICES.map((service, i) => (
-              <ServiceCard key={service.id} service={service} index={i} />
+              <div key={service.id} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]">
+                <ServiceCard service={service} index={i} />
+              </div>
             ))}
           </div>
           <div className="mt-16 text-center">
