@@ -26,9 +26,11 @@ export default function ServicesHub() {
 
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="flex flex-wrap justify-center gap-12">
             {SERVICES.map((service, i) => (
-              <ServiceCard key={service.id} service={service} index={i} />
+              <div key={service.id} className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)]">
+                <ServiceCard service={service} index={i} />
+              </div>
             ))}
           </div>
         </div>
